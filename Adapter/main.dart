@@ -1,6 +1,9 @@
-/// Target クライアントが使用するインターフェース
-/// Adapter Targetインターフェースを実装し、Adpteeを呼び出す
-/// Adaptee 変換されるインターフェースを持つ既存のクラス
+/// 名前：アダプターパターン
+/// 実装で使えるか：使える
+/// 内容：
+/// 　Target クライアントが使用するインターフェース
+/// 　Adapter Targetインターフェースを実装し、Adpteeを呼び出す
+/// 　Adaptee 変換されるインターフェースを持つ既存のクラス
 
 void main() {
   OldMediaPlayer oldMediaPlayer = OldMediaPlayer();
@@ -18,6 +21,7 @@ class OldMediaPlayer {
 
 /// 新しいインターフェース（Target）
 abstract class MediaPlayer {
+  /// 音楽再生
   void play(String fileName);
 }
 
@@ -33,7 +37,7 @@ class MediaPlayerAdpter implements MediaPlayer {
     this._oldMediaPlayer = oldMediaPlayer;
   }
 
-  /// 音楽作成
+  /// 音楽再生
   @override
   void play(String fileName) {
     _oldMediaPlayer.playOldMedia(fileName);
