@@ -1,4 +1,6 @@
-/// 抽象部分実装部分を分離し、それぞれを独立して拡張可能にする手法
+/// 名前：ブリッジパターン
+/// 実装で使えるか：使える
+/// 内容：抽象部分実装部分を分離し、それぞれを独立して拡張可能にする手法
 
 void main() {
   Shape redCircle = Circle(RedColor());
@@ -35,14 +37,12 @@ class BuleColor implements Color {
 /// 形基底クラス
 abstract class Shape {
   /// 色
-  late Color color;
+  final Color color;
 
   /// コンストラクタ
   ///
   /// [color] 色
-  Shape(Color color) {
-    this.color = color;
-  }
+  Shape(this.color);
 
   /// 描画
   void draw();
