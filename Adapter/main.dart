@@ -28,14 +28,12 @@ abstract class MediaPlayer {
 /// Adapterクラス
 class MediaPlayerAdpter implements MediaPlayer {
   /// 既存のインターフェース
-  late OldMediaPlayer _oldMediaPlayer;
+  final OldMediaPlayer _oldMediaPlayer;
 
   /// コンストラクタ
   ///
-  /// [oldMediaPlayer] 既存のインターフェース
-  MediaPlayerAdpter(OldMediaPlayer oldMediaPlayer) {
-    this._oldMediaPlayer = oldMediaPlayer;
-  }
+  /// [_oldMediaPlayer] 既存のインターフェース
+  MediaPlayerAdpter(this._oldMediaPlayer);
 
   /// 音楽再生
   @override
