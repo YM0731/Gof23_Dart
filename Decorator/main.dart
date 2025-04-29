@@ -46,8 +46,12 @@ class SimpleCoffee implements Coffee {
 /// ----------------------------------------
 /// コーヒーDecorator基底クラス
 abstract class CoffeeDecorator implements Coffee {
+  /// コーヒー
   Coffee decoratedCoffee;
 
+  /// コンストラクタ
+  ///
+  /// [decoratedCoffee] コーヒー
   CoffeeDecorator(this.decoratedCoffee);
 
   /// 詳細表示
